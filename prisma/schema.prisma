@@ -10,7 +10,7 @@ datasource db {
   url          = env("DATABASE_URL")
   relationMode = "prisma"
 }
-
+// Grabbed from NextAuth
 model Account {
   id                String  @id @default(cuid())
   userId            String
