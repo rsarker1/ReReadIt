@@ -1,2 +1,2 @@
-# ReReadIt
+# ReReaddit
 A Reddit Clone
