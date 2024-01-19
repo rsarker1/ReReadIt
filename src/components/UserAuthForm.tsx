@@ -18,10 +18,10 @@ const UserAuthForm: FC<UserAuthFormProps> = ({ className, ...props }) => {
         setIsLoading(true)
 
         try {
-            await signIn("google")
+            await signIn('google')
         } catch(error) {
             toast({
-                title: 'Error',
+                title: 'There was a problem.',
                 description: 'There was an error logging in with Google',
                 variant: 'destructive',
             })
