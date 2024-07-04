@@ -1,12 +1,26 @@
 'use client'
 
 import { Button } from "@/components/ui/Button"
-import { Input } from "@/components/ui/input"
+import { Input } from "@/components/ui/Input"
+import { useRouter } from "next/navigation"
 import { useState } from "react"
+import { useMutation } from "@tanstack/react-query"
+import axios from "axios"
+import { CreateSubredditPayload } from "@/lib/validators/subreddit"
 
 const Page = () => {
     const [input, setInput] = useState<string>('')
-    const 
+    const router = useRouter()
+
+    const { mutate: createCommunity, isLoading } = useMutation({  
+        mutationFn: async () => {
+            const payload: CreateSubredditPayload = {
+                name: input,
+            }
+            const { data } = await axios.post('/api/subreddit', payload)
+            return data as string 
+        }
+    })
 
     return <div className="container flex items-center h-full max-w-3xl mx-auto">
         <div className="relative bg-white w-full h-fit p-4 rounded-lg space-y-6">
@@ -31,7 +45,12 @@ const Page = () => {
             </div>
 
             <div className="flex justify-end gap-4">
-                <Button variant='subtle' onClick={() => }>Cancel</Button>
+                <Button variant='subtle' onClick={() => router.back()}> 
+                    Cancel 
+                </Button>
+                <Button>
+                    Create Community
+                </Button>
             </div>
         </div>
     </div>
