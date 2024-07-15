@@ -1,0 +1,1 @@
+export const INF_SCROLL_PAGINATION_RESULTS = 2
