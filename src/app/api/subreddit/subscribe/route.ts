@@ -20,7 +20,7 @@ export async function POST(req: Request) {
       },
     })
 
-    if(subscriptionExists)
+    if (subscriptionExists)
       return new Response('You are already subscribed to this subreddit.', {
         status: 400,
       })
