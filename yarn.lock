@@ -101,6 +101,21 @@
   dependencies:
     "@codexteam/icons" "^0.0.6"
 
+"@effect/platform@0.63.2":
+  version "0.63.2"
+  resolved "https://registry.npmjs.org/@effect/platform/-/platform-0.63.2.tgz"
+  integrity sha512-b39pVFw0NGo/tXjGShW7Yg0M+kG7bRrFR6+dQ3aIu99ePTkTp6bGb/kDB7n+dXsFFdIqHsQGYESeYcOQngxdFQ==
+  dependencies:
+    find-my-way-ts "^0.1.5"
+    multipasta "^0.2.5"
+
+"@effect/schema@^0.72.2", "@effect/schema@0.72.2":
+  version "0.72.2"
+  resolved "https://registry.npmjs.org/@effect/schema/-/schema-0.72.2.tgz"
+  integrity sha512-/x1BIA2pqcUidNrOMmwYe6Z58KtSgHSc5iJu7bNwIxi2LHMVuUao1BvpI5x6i7T/zkoi4dd1S6qasZzJIYDjdw==
+  dependencies:
+    fast-check "^3.21.0"
+
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
   resolved "https://registry.npmjs.org/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz"
@@ -872,22 +887,34 @@
     "@typescript-eslint/types" "5.62.0"
     eslint-visitor-keys "^3.3.0"
 
-"@uploadthing/mime-types@^0.2.0", "@uploadthing/mime-types@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.npmjs.org/@uploadthing/mime-types/-/mime-types-0.2.2.tgz"
-  integrity sha512-ZUo1JHOPPMZDsUw1mOhhVDIvJGlsjj6T0xJ/YJtulyJwL43S9B5pxg1cHcRuTEgjaxj7B55jiqQ6r9mDrrjH9A==
-
-"@uploadthing/react@^4.1.3":
-  version "4.1.3"
-  resolved "https://registry.npmjs.org/@uploadthing/react/-/react-4.1.3.tgz"
-  integrity sha512-PG463gGyFnvaBhG5tf7rLDUQb9WDbHPzcV/1EGvrkli4LoMHtBXmTeD9WujwopJ4LjyVuXLh4hgYm7ZJlMlThQ==
+"@uploadthing/dropzone@0.4.1":
+  version "0.4.1"
+  resolved "https://registry.npmjs.org/@uploadthing/dropzone/-/dropzone-0.4.1.tgz"
+  integrity sha512-RHSpo/2kg/mrRSYQA4EKlyvkOCYWOeE2+QQYW9YiUvWCuawnTfD7DQvk8RN/nYXi1Sw7/v0NegmQpiVELVGtnA==
   dependencies:
-    "@uploadthing/shared" "^5.0.0"
+    file-selector "^0.6.0"
 
-"@uploadthing/shared@^5.0.0":
-  version "5.2.7"
-  resolved "https://registry.npmjs.org/@uploadthing/shared/-/shared-5.2.7.tgz"
-  integrity sha512-gc+i66m0vPQpy5PC783iq1koE8Fm9lFTd3uPrJAr7kXwpNRteJs4dnu6etDkY8EilTjMFA6w4js/AhW8AUDuQg==
+"@uploadthing/mime-types@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.npmjs.org/@uploadthing/mime-types/-/mime-types-0.3.0.tgz"
+  integrity sha512-jN/XFvpKTzcd3MXT/9D9oxx05scnYiSYxAXF/e6hyg377zFducRxivU/kHyYTkpUZPTmOL5q9EQbOkUsXMlSMg==
+
+"@uploadthing/react@^7.0.2":
+  version "7.0.2"
+  resolved "https://registry.npmjs.org/@uploadthing/react/-/react-7.0.2.tgz"
+  integrity sha512-343zTofWBo1yR+31/oP75WCTCC1lUuyAhfoqgJ0MEY64i15KoQAaTe3ICSNnXyeRaHCmJSQeK3hbEl44QGq/iQ==
+  dependencies:
+    "@uploadthing/dropzone" "0.4.1"
+    "@uploadthing/shared" "7.0.2"
+
+"@uploadthing/shared@7.0.2":
+  version "7.0.2"
+  resolved "https://registry.npmjs.org/@uploadthing/shared/-/shared-7.0.2.tgz"
+  integrity sha512-yhE7lA42m6g7Qw245Ey/8uK5J4d8FJhOg90VVt0PG1iJYvBZHbboSq1ndsGZ1X8jFaskBVORzWc66gEw43FEsQ==
+  dependencies:
+    "@uploadthing/mime-types" "0.3.0"
+    effect "3.7.2"
+    sqids "^0.3.0"
 
 "@upstash/redis@^1.21.0":
   version "1.28.0"
@@ -1501,6 +1528,16 @@ editorjs-react-renderer@^3.5.1:
     html-react-parser "^3.0.4"
     react "^18.2.0"
 
+effect-log@0.32.0:
+  version "0.32.0"
+  resolved "https://registry.npmjs.org/effect-log/-/effect-log-0.32.0.tgz"
+  integrity sha512-zlh4S+zBkHeDhiV5IAAXwecqxASVJk9tYNJUb12EuJqgtRGGyhrXYNn8zz5Gk/w7PmnNLTl9Vb6bQo2BFn+J/Q==
+
+effect@^3.7.0, effect@^3.7.2, effect@3.7.2:
+  version "3.7.2"
+  resolved "https://registry.npmjs.org/effect/-/effect-3.7.2.tgz"
+  integrity sha512-pV7l1+LSZFvVObj4zuy4nYiBaC7qZOfrKV6s/Ef4p3KueiQwZFgamazklwyZ+x7Nyj2etRDFvHE/xkThTfQD1w==
+
 electron-to-chromium@^1.4.601:
   version "1.4.630"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.630.tgz"
@@ -1848,6 +1885,13 @@ expand-template@^2.0.3:
   resolved "https://registry.npmjs.org/expand-template/-/expand-template-2.0.3.tgz"
   integrity sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==
 
+fast-check@^3.21.0:
+  version "3.22.0"
+  resolved "https://registry.npmjs.org/fast-check/-/fast-check-3.22.0.tgz"
+  integrity sha512-8HKz3qXqnHYp/VCNn2qfjHdAdcI8zcSqOyX64GOMukp7SL2bfzfeDKjSd+UyECtejccaZv3LcvZTm9YDD22iCQ==
+  dependencies:
+    pure-rand "^6.1.0"
+
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"
@@ -1906,6 +1950,11 @@ fill-range@^7.0.1:
   integrity sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==
   dependencies:
     to-regex-range "^5.0.1"
+
+find-my-way-ts@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.npmjs.org/find-my-way-ts/-/find-my-way-ts-0.1.5.tgz"
+  integrity sha512-4GOTMrpGQVzsCH2ruUn2vmwzV/02zF4q+ybhCIrw/Rkt3L8KWcycdC6aJMctJzwN4fXD4SD5F/4B9Sksh5rE0A==
 
 find-up@^5.0.0:
   version "5.0.0"
@@ -2673,6 +2722,11 @@ ms@^2.1.1, ms@2.1.2:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
+multipasta@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.npmjs.org/multipasta/-/multipasta-0.2.5.tgz"
+  integrity sha512-c8eMDb1WwZcE02WVjHoOmUVk7fnKU/RmUcosHACglrWAuPQsEJv+E8430sXj6jNc1jHw0zrS16aCjQh4BcEb4A==
+
 mz@^2.7.0:
   version "2.7.0"
   resolved "https://registry.npmjs.org/mz/-/mz-2.7.0.tgz"
@@ -2722,7 +2776,7 @@ next-auth@^4, next-auth@^4.22.1:
     preact-render-to-string "^5.1.19"
     uuid "^8.3.2"
 
-"next@^12.2.5 || ^13 || ^14", next@13.4.4:
+next@*, "next@^12.2.5 || ^13 || ^14", next@13.4.4:
   version "13.4.4"
   resolved "https://registry.npmjs.org/next/-/next-13.4.4.tgz"
   integrity sha512-C5S0ysM0Ily9McL4Jb48nOQHT1BukOWI59uC3X/xCMlYIh9rJZCv7nzG92J6e1cOBqQbKovlpgvHWFmz4eKKEA==
@@ -3109,6 +3163,11 @@ punycode@^2.1.0:
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz"
   integrity sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==
 
+pure-rand@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.npmjs.org/pure-rand/-/pure-rand-6.1.0.tgz"
+  integrity sha512-bVWawvoZoBYpp6yIoQtQXHZjmz35RSVHnUOTefl8Vcjr8snTPY1wnpSPMWekcFwbxI6gtmT7rSYPFvz71ldiOA==
+
 queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
@@ -3450,6 +3509,11 @@ source-map-js@^1.0.2:
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
 
+sqids@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npmjs.org/sqids/-/sqids-0.3.0.tgz"
+  integrity sha512-lOQK1ucVg+W6n3FhRwwSeUijxe93b51Bfz5PMRMihVf1iVkl82ePQG7V5vwrhzB11v0NtsR25PSZRGiSomJaJw==
+
 streamsearch@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/streamsearch/-/streamsearch-1.1.0.tgz"
@@ -3631,7 +3695,7 @@ tailwindcss-animate@^1.0.5:
   resolved "https://registry.npmjs.org/tailwindcss-animate/-/tailwindcss-animate-1.0.7.tgz"
   integrity sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==
 
-"tailwindcss@>=3.0.0 || >= 3.0.0-alpha.1", "tailwindcss@>=3.0.0 || insiders", tailwindcss@3.3.2:
+tailwindcss@*, "tailwindcss@>=3.0.0 || >= 3.0.0-alpha.1", "tailwindcss@>=3.0.0 || insiders", tailwindcss@3.3.2:
   version "3.3.2"
   resolved "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.3.2.tgz"
   integrity sha512-9jPkMiIBXvPc2KywkraqsUfbfj+dHDb+JPWtSJa9MLFdrPyazI7q6WX2sUrm7R9eVR7qqv3Pas7EvQFzxKnI6w==
@@ -3843,13 +3907,17 @@ update-browserslist-db@^1.0.13:
     escalade "^3.1.1"
     picocolors "^1.0.0"
 
-uploadthing@^4.0.0, uploadthing@^4.1.3:
-  version "4.1.3"
-  resolved "https://registry.npmjs.org/uploadthing/-/uploadthing-4.1.3.tgz"
-  integrity sha512-4cvlRhtld+GwrEE3AsjBLJaqYjZOAuyzwD/69wHcYlT175Ukgw8Yn5xPRAChPIEUmCM7JLBJu6OOneSGP/mRxg==
+uploadthing@^7.0.2, uploadthing@7.0.2:
+  version "7.0.2"
+  resolved "https://registry.npmjs.org/uploadthing/-/uploadthing-7.0.2.tgz"
+  integrity sha512-B5/r0nmOfWjo+cGvZLyDQ8jypJYWoW/VsmoL+VqkiGMg5yIkKzMGJ5InrDOJS+3WQBbW8KdhVrRyA+mGSZEGUw==
   dependencies:
-    "@uploadthing/mime-types" "^0.2.0"
-    "@uploadthing/shared" "^5.0.0"
+    "@effect/platform" "0.63.2"
+    "@effect/schema" "0.72.2"
+    "@uploadthing/mime-types" "0.3.0"
+    "@uploadthing/shared" "7.0.2"
+    effect "3.7.2"
+    effect-log "0.32.0"
 
 uri-js@^4.2.2:
   version "4.4.1"
