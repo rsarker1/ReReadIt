@@ -41,10 +41,10 @@
   dependencies:
     "@codexteam/icons" "^0.0.5"
 
-"@editorjs/editorjs@^2.27.0":
-  version "2.28.2"
-  resolved "https://registry.npmjs.org/@editorjs/editorjs/-/editorjs-2.28.2.tgz"
-  integrity sha512-g6V0Nd3W9IIWMpvxDNTssQ6e4kxBp1Y0W4GIf8cXRlmcBp3TUjrgCYJQmNy3l2a6ZzhyBAoVSe8krJEq4g7PQw==
+"@editorjs/editorjs@^2.30.6":
+  version "2.30.6"
+  resolved "https://registry.npmjs.org/@editorjs/editorjs/-/editorjs-2.30.6.tgz"
+  integrity sha512-6eQMc4Di3Hz9p4o+NGRgKaCeAF7eAk106m+bsDLc4eo94VGYO1M163OiGFdmanE+w503qTmXOzycWff5blEOAQ==
 
 "@editorjs/embed@^2.5.3":
   version "2.7.0"
