@@ -1,7 +1,7 @@
 'use client'
 
 import { ExtendedPost } from '@/types/ExtendedPost'
-import { FC, useRef } from 'react'
+import { FC, useEffect, useRef } from 'react'
 import { useIntersection } from '@mantine/hooks'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import { INF_SCROLL_PAGINATION_RESULTS } from '@/config'
@@ -40,6 +40,10 @@ const PostFeed: FC<PostFeedProps> = ({ initialPosts, subredditName }) => {
       initialData: { pages: [initialPosts], pageParams: [1] },
     }
   )
+
+  useEffect(() => {
+    if (entry?.isIntersecting) fetchNextPage()
+  }, [entry, fetchNextPage])
   // Only runs when data is undefined or null
   const posts = data?.pages.flatMap((page) => page) ?? initialPosts
 
@@ -71,6 +75,7 @@ const PostFeed: FC<PostFeedProps> = ({ initialPosts, subredditName }) => {
         } else
           return (
             <Post
+              key={post.id}
               currentVote={currVote}
               votesAmt={votesAmt}
               commentAmt={post.comments.length}

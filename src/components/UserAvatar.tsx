@@ -1,9 +1,9 @@
 import { Avatar, AvatarFallback } from './ui/Avatar'
-import { User } from 'next-auth'
 import Image from 'next/image'
 import { FC } from 'react'
 import { Icons } from './Icons'
 import { AvatarProps } from '@radix-ui/react-avatar'
+import { User } from '@prisma/client'
 
 interface UserAvatarProps extends AvatarProps{
     user: Pick<User, 'name' | 'image'>

@@ -8,7 +8,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import type EditorJS from '@editorjs/editorjs'
 import { uploadFiles } from '@/uploadthing'
 import { toast } from '@/hooks/use-toast'
-import { PostPayload } from '@prisma/client'
 import { useMutation } from '@tanstack/react-query'
 import axios from 'axios'
 import { usePathname, useRouter } from 'next/navigation'
@@ -16,7 +15,7 @@ import { usePathname, useRouter } from 'next/navigation'
 interface EditorProps {
   subredditId: string
 }
-
+// Edit later
 const Editor: FC<EditorProps> = ({ subredditId }) => {
   const {
     register,
