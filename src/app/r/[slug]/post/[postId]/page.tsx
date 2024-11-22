@@ -1,10 +1,10 @@
 import { FC } from 'react'
 
-interface pageProps {
-  
+interface PageProps {
+  params: {}
 }
 
-const page: FC<pageProps> = ({}) => {
+const page = ({ params }: PageProps) => {
   return <div>page</div>
 }
 
